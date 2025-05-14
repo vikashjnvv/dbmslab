@@ -8,7 +8,7 @@ database="lab"
 )
 cur = conn.cursor()
 cur.execute(""" 
-REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'new_user';
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'new_user'@'%';
 """)
 conn.commit()
 conn.close()
